@@ -11,21 +11,34 @@ public class ShootingGun : MonoBehaviour
 
     [SerializeField] private Camera fpsCam;
 
-    [SerializeField] private ParticleSystem muzzleFlash;
+    [SerializeField] private ParticleSystem muzzleBullet;
+    [SerializeField] private ParticleSystem muzzleFire;
 
+    private float randomValue;
 
     void Update()
     {
         if (Input.GetButtonDown("Jump"))
         {
-            AudioManager.instance.playSFX("Gunshot", 1f);
             Shoot();
         }
     }
 
     void Shoot()
     {
-        muzzleFlash.Play();
+        randomValue = Random.value;
+        //Debug.Log(randomValue);
+        if (randomValue < 0.2f)
+        {
+            AudioManager.instance.playSFX("FireGun", 1f);
+            muzzleFire.Play();
+        }
+        else
+        {
+            AudioManager.instance.playSFX("Gunshot", 1f);
+            muzzleBullet.Play();
+        }
+
         RaycastHit hit;
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
         {
