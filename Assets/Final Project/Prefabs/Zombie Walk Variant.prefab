@@ -73,7 +73,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7a1ec8b2142e11144b5dd4dab5967884, type: 3}
       propertyPath: m_Name
-      value: Zombie Walk
+      value: Zombie Walk Variant
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7a1ec8b2142e11144b5dd4dab5967884, type: 3}
       propertyPath: m_IsActive
@@ -187,6 +187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 90
+  canvas_hp: {fileID: 5247540499766749453}
   img_hp: {fileID: 1390590193230587503}
   isDead: 0
   target: {fileID: 308827313447381802, guid: 13c7f6e99e68a394b84460bcbc39c79c, type: 3}
@@ -316,3 +317,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &5247540499766749453 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8176961372097817925, guid: 25f92b84487ceaa4e8d1ecb058d29c81, type: 3}
+  m_PrefabInstance: {fileID: 4154963470953579592}
+  m_PrefabAsset: {fileID: 0}

@@ -16,14 +16,15 @@ public class CrowController : ZombieAI
     protected override void Start()
     {
         base.Start();
-        Debug.Log("Start from child crow");
+        //Debug.Log("Start from child crow");
 
         crowRB = GetComponent<Rigidbody>();
     }
 
     void Update()
-    {   
-        Patrol();
+    {
+        if (!isDead)
+            Patrol();
     }
 
     public void Seek(Vector3 target)
@@ -57,6 +58,13 @@ public class CrowController : ZombieAI
                 speed = 0.7f;
             }
         }
+    }
+
+    protected override void Die()
+    {
+        base.Die();
+        crowRB.useGravity = true;
+        Destroy(gameObject, 3);
     }
 
     //private void OnDrawGizmos()

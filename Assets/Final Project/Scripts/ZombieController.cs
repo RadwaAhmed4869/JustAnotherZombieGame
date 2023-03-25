@@ -11,14 +11,12 @@ public class ZombieController : ZombieAI
     private NavMeshAgent m_Agent;
     [SerializeField] private float distance;
     private float currentDistance;
-    private Animator anim;
     protected override void Start()
     {
         base.Start();
-        Debug.Log("Start from child zombie");
+        //Debug.Log("Start from child zombie");
 
         m_Agent = GetComponent<NavMeshAgent>();
-        anim = GetComponent<Animator>();
 
         //m_Agent.SetDestination(target.transform.position);
         m_Agent.transform.LookAt(target);
@@ -43,7 +41,6 @@ public class ZombieController : ZombieAI
     protected override void Die()
     {
         m_Agent.isStopped = true;
-        anim.SetTrigger("isDead");
-        Destroy(gameObject, 3);
+        base.Die();
     }
 }

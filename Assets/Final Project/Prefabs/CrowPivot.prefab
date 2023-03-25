@@ -107,6 +107,7 @@ GameObject:
   - component: {fileID: 274530165467645187}
   - component: {fileID: 274530165467645191}
   - component: {fileID: 274530165467645190}
+  - component: {fileID: 1225780437692921415}
   - component: {fileID: 274530165467645185}
   - component: {fileID: 274530165467645188}
   - component: {fileID: 274530165467645189}
@@ -163,6 +164,26 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.1435293, y: 0.09680739, z: 0.2272613}
   m_Center: {x: 0.0021011457, y: -0.0017935485, z: -0.088349864}
+--- !u!95 &1225780437692921415
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 274530165467645186}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d36bcaf9a9b02254c9121ba22350a6e7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!195 &274530165467645185
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -266,6 +287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 30
+  canvas_hp: {fileID: 4361090262447628929}
   img_hp: {fileID: 7429506022507490787}
   isDead: 0
   waypoints:
@@ -2324,6 +2346,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: npcCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 8417157077996394930, guid: 25f92b84487ceaa4e8d1ecb058d29c81, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8848235702797808334, guid: 25f92b84487ceaa4e8d1ecb058d29c81, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2413,6 +2439,11 @@ PrefabInstance:
 --- !u!224 &3978063899933097226 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8848235702797808334, guid: 25f92b84487ceaa4e8d1ecb058d29c81, type: 3}
+  m_PrefabInstance: {fileID: 5620443371045654468}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4361090262447628929 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8176961372097817925, guid: 25f92b84487ceaa4e8d1ecb058d29c81, type: 3}
   m_PrefabInstance: {fileID: 5620443371045654468}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &7429506022507490787 stripped
