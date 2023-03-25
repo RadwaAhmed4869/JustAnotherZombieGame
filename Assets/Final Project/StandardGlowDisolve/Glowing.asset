@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: Glowing
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor\n// Available at the Unity
+    Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=18900\n202;73;1322;694;1226.839;375.8146;1.295365;True;False\nNode;AmplifyShaderEditor.SimpleTimeNode;4;-544.0216,213.6443;Inherit;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SinOpNode;6;-358.022,212.7805;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;10;-57.44897,-95.1756;Inherit;False;3;3;0;FLOAT;0;False;1;COLOR;0,0,0,0;False;2;FLOAT;0;False;1;COLOR;0\nNode;AmplifyShaderEditor.SaturateNode;8;-222.449,-96.1756;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.LerpOp;17;149.9872,-94.88385;Inherit;False;3;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;2;FLOAT;0;False;1;COLOR;0\nNode;AmplifyShaderEditor.RangedFloatNode;2;-628.9912,-1.427399;Inherit;False;Property;_GlowPower;Glow
+    Power;3;0;Create;False;0;0;0;False;0;False;5;5;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.FresnelNode;5;-456.4488,-94.1756;Inherit;False;Standard;TangentNormal;ViewDir;False;False;5;0;FLOAT3;0,0,1;False;4;FLOAT3;0,0,0;False;1;FLOAT;0;False;2;FLOAT;1;False;3;FLOAT;5;False;1;FLOAT;0\nNode;AmplifyShaderEditor.ColorNode;9;-275.3491,-16.45568;Inherit;False;Property;_GlowColor;Glow
+    Color;1;1;[HDR];Create;False;1;;0;0;False;0;False;0,0,0,0;7.874345,7.874345,7.874345,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.RangedFloatNode;15;-31.48404,24.66928;Inherit;False;Property;_GlowingDisable;Glowing
+    Disable;0;2;[Header];[Toggle];Create;False;1;Glowing Effect;0;0;False;0;False;1;0;0;1;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;1;-701.6184,213.0859;Inherit;False;Property;_GlowSpeed;Glow
+    Speed;2;0;Create;False;0;0;0;False;0;False;1;1;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.TFHCRemapNode;7;-209.2048,212.1607;Inherit;False;5;0;FLOAT;0;False;1;FLOAT;-1;False;2;FLOAT;1;False;3;FLOAT;0;False;4;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;12;-644.2204,-100.2089;Inherit;False;NormalMap;3;0;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SamplerNode;13;-1000.101,-101.2878;Inherit;True;Property;_BumpMap;Default
+    Normal Map;4;0;Create;False;0;0;0;False;0;False;-1;None;None;True;0;False;bump;Auto;True;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.FunctionOutput;0;325.0623,-96.57671;Inherit;False;True;-1;Output;0;False;1;0;COLOR;0,0,0,0;False;1;COLOR;0\nWireConnection;4;0;1;0\nWireConnection;6;0;4;0\nWireConnection;10;0;8;0\nWireConnection;10;1;9;0\nWireConnection;10;2;7;0\nWireConnection;8;0;5;0\nWireConnection;17;0;10;0\nWireConnection;17;2;15;0\nWireConnection;5;0;12;0\nWireConnection;5;3;2;0\nWireConnection;7;0;6;0\nWireConnection;12;0;13;0\nWireConnection;0;0;17;0\nASEEND*/\n//CHKSM=6CCB895AB887F05F158E979A06085DAA0DF1B4F3"
+  m_functionName: 
+  m_description: 
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 3
+  m_customNodeCategory: 
+  m_previewPosition: 0
+  m_hidden: 0
