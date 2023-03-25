@@ -58,3 +58,20 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+/BehaviorBricks.meta
+/BehaviorBricks/
+
+/Day*.meta
+/Day*/
+
+/Final Project/Epic Toon FX.meta
+/Final Project/Epic Toon FX/
+
+/Final Project/Skybox.meta
+/Final Project/Skybox/
+
+/TextMesh Pro.meta
+/TextMesh Pro/
+
+/Yago Mira.meta
+/Yago Mira/
