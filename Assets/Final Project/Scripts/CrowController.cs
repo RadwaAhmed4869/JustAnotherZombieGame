@@ -12,6 +12,7 @@ public class CrowController : ZombieAI
 
     [SerializeField] private float speed;
     private Rigidbody crowRB;
+    private BoxCollider crowBox;
 
     protected override void Start()
     {
@@ -19,6 +20,7 @@ public class CrowController : ZombieAI
         //Debug.Log("Start from child crow");
 
         crowRB = GetComponent<Rigidbody>();
+        crowBox = GetComponent<BoxCollider>();
     }
 
     void Update()
@@ -63,6 +65,7 @@ public class CrowController : ZombieAI
     protected override void Die()
     {
         base.Die();
+        crowBox.isTrigger = false;
         crowRB.useGravity = true;
         Destroy(gameObject, 3);
     }

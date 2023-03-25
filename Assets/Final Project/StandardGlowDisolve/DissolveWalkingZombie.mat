@@ -84,12 +84,12 @@ Material:
     - _CullMode: 0
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
-    - _DissolveAmount: 0.674
+    - _DissolveAmount: 1
     - _DissolveAmount1: 0
     - _DissolveAmount2: 0
     - _DissolveDisable: 0
-    - _DissolveFalloff: 50
-    - _DissolveThickness: 0.507
+    - _DissolveFalloff: 10
+    - _DissolveThickness: 0.588
     - _DissolveToggle: 0
     - _DissolveToggle1: 1
     - _DstBlend: 0
@@ -117,7 +117,7 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Color0: {r: 1, g: 1, b: 1, a: 0}
-    - _DissolveColor: {r: 7.0943413, g: 1.9756454, b: 0.33428812, a: 0}
+    - _DissolveColor: {r: 7.0943413, g: 1.2552775, b: 0.33428812, a: 0}
     - _DissolveColor1: {r: 3.9999995, g: 3.0157065, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _GlowColor: {r: 1.3926703, g: 0.45725468, b: 0.3062416, a: 0}

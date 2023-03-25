@@ -84,7 +84,7 @@ Material:
     - _CullMode: 0
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
-    - _DissolveAmount: 0.674
+    - _DissolveAmount: 1
     - _DissolveAmount1: 0
     - _DissolveAmount2: 0
     - _DissolveDisable: 0
