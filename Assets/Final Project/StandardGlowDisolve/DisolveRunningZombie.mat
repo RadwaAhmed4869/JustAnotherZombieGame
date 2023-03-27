@@ -88,8 +88,8 @@ Material:
     - _DissolveAmount1: 0
     - _DissolveAmount2: 0
     - _DissolveDisable: 0
-    - _DissolveFalloff: 50
-    - _DissolveThickness: 0.507
+    - _DissolveFalloff: 10
+    - _DissolveThickness: 0.588
     - _DissolveToggle: 0
     - _DissolveToggle1: 1
     - _DstBlend: 0

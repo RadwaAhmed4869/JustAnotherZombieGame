@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShootingGun : MonoBehaviour
 {
-    public float range;
+    //public float range;
     public float impactForce = 30f;
 
     [SerializeField] float damage;
@@ -28,19 +28,19 @@ public class ShootingGun : MonoBehaviour
     {
         randomValue = Random.value;
         //Debug.Log(randomValue);
-        if (randomValue < 0.2f)
+        if (randomValue > 0.2f)
         {
-            AudioManager.instance.playSFX("FireGun", 1f);
+            AudioManager.instance.playSFX("Gunshot", 0.5f);
             muzzleFire.Play();
         }
         else
         {
-            AudioManager.instance.playSFX("Gunshot", 1f);
+            AudioManager.instance.playSFX("FireGun", 0.5f);
             muzzleBullet.Play();
         }
 
         RaycastHit hit;
-        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
+        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit))
         {
             //Debug.DrawRay(fpsCam.transform.position, fpsCam.transform.forward * range, Color.green, 5);
             //Debug.Log(hit.transform.tag);

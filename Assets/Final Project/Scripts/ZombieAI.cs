@@ -15,12 +15,14 @@ public class ZombieAI : MonoBehaviour
     protected Animator anim;
     [SerializeField] protected bool isDead;
 
+    protected CapsuleCollider zombieCollider;
 
     protected virtual void Start()
     {
         //Debug.Log("Start from parent");
 
         anim = GetComponent<Animator>();
+        zombieCollider = GetComponent<CapsuleCollider>();
 
         health = maxHealth;
         img_hp.transform.localScale = new Vector3(health / maxHealth, 1, 1);
@@ -47,9 +49,11 @@ public class ZombieAI : MonoBehaviour
 
     protected virtual void Die()
     {
+        zombieCollider.radius = 0.01f;
         canvas_hp.SetActive(false);
         isDead = true;
         anim.SetTrigger("isDead");
-        Destroy(gameObject, 3);
     }
+
+    protected virtual void PlayAttackSound() { }
 }

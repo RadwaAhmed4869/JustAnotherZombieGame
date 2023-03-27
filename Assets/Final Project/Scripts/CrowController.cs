@@ -12,7 +12,7 @@ public class CrowController : ZombieAI
 
     [SerializeField] private float speed;
     private Rigidbody crowRB;
-    private BoxCollider crowBox;
+    //private CapsuleCollider crowCollider;
 
     protected override void Start()
     {
@@ -20,7 +20,7 @@ public class CrowController : ZombieAI
         //Debug.Log("Start from child crow");
 
         crowRB = GetComponent<Rigidbody>();
-        crowBox = GetComponent<BoxCollider>();
+        //crowCollider = GetComponent<CapsuleCollider>();
     }
 
     void Update()
@@ -59,15 +59,32 @@ public class CrowController : ZombieAI
             {
                 speed = 0.7f;
             }
+
+            if(wayPointsCounter == 14)
+            {
+                AudioManager.instance.playSFX("CrowAttack", 1f);
+            }
         }
     }
 
     protected override void Die()
     {
         base.Die();
-        crowBox.isTrigger = false;
+        AudioManager.instance.playSFX("CrowDie", 1f);
+        //crowCollider.isTrigger = false;
+        zombieCollider.isTrigger = false;
         crowRB.useGravity = true;
+        crowRB.freezeRotation = true;
         Destroy(gameObject, 3);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag.Equals("Player"))
+        {
+            PlayerLife player = other.GetComponent<PlayerLife>();
+            player.TakeDamage(10);
+        }
     }
 
     //private void OnDrawGizmos()

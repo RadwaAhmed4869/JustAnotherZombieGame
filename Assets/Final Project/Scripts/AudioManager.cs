@@ -26,7 +26,7 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        PlayMusic("Theme");
+        //PlayMusic("Theme");
     }
 
 
@@ -39,8 +39,9 @@ public class AudioManager : MonoBehaviour
 
         if (s != null)
         {
-            musicSource.clip = s.clip;
-            musicSource.Play();
+            musicSource.PlayOneShot(s.clip, 0.2f);
+            //musicSource.clip = s.clip;
+            //musicSource.Play();
         }
     }
 
@@ -52,6 +53,10 @@ public class AudioManager : MonoBehaviour
 
         if (s != null)
         {
+            if (sfxSource.clip == s.clip && sfxSource.isPlaying)
+            {
+                return;
+            }
             sfxSource.PlayOneShot(s.clip, SFXVolume);
         }
        
