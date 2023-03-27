@@ -8,6 +8,8 @@ public class PlayerLife : MonoBehaviour
 {
     private float maxHealth = 100;
     [SerializeField] private float health;
+    [SerializeField] GameObject canvas_hp;
+    [SerializeField] Image img_hp;
 
     [SerializeField] private Image redSplatter1 = null;
     [SerializeField] private Image redSplatter2 = null;
@@ -22,10 +24,13 @@ public class PlayerLife : MonoBehaviour
 
     [SerializeField] AudioSource musicAudioSrc;
 
+    
 
     private void Start()
     {
         health = maxHealth;
+        img_hp.transform.localScale = new Vector3(health / maxHealth, 1, 1);
+
         gradientFlash.enabled = false;
         gameOvertxt.enabled = false;
     }
@@ -63,6 +68,7 @@ public class PlayerLife : MonoBehaviour
     public void TakeDamage(float amount)
     {
         health -= amount;
+        img_hp.transform.localScale = new Vector3(health / maxHealth, 1, 1);
 
         randomValue = Random.value;
         if (randomValue > 0.2f)
@@ -96,6 +102,7 @@ public class PlayerLife : MonoBehaviour
     {
         gameOvertxt.enabled = true;
         gradientFlash.enabled = true;
+        canvas_hp.SetActive(false);
         gunPin.SetActive(false);
         musicAudioSrc.Stop();
         AudioManager.instance.playSFX("Pain1", 1f);

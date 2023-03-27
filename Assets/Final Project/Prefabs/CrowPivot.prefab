@@ -290,6 +290,7 @@ MonoBehaviour:
   canvas_hp: {fileID: 4361090262447628929}
   img_hp: {fileID: 7429506022507490787}
   isDead: 0
+  MaxNumberOfZombies: 22
   waypoints:
   - {fileID: 0}
   - {fileID: 0}

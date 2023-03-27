@@ -117,7 +117,7 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Color0: {r: 1, g: 1, b: 1, a: 0}
-    - _DissolveColor: {r: 7.0943413, g: 4.1102934, b: 0.33428812, a: 0}
+    - _DissolveColor: {r: 7.0943413, g: 1.2356286, b: 0.33428812, a: 0}
     - _DissolveColor1: {r: 3.9999995, g: 3.0157065, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _GlowColor: {r: 1.3926703, g: 0.45725468, b: 0.3062416, a: 0}

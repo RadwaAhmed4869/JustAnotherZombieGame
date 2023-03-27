@@ -703,6 +703,7 @@ MonoBehaviour:
   canvas_hp: {fileID: 5247540499766749453}
   img_hp: {fileID: 1390590193230587503}
   isDead: 0
+  MaxNumberOfZombies: 22
   target: {fileID: 308827313447381802, guid: 13c7f6e99e68a394b84460bcbc39c79c, type: 3}
   distance: 0.7
 --- !u!4 &776571963933018373 stripped

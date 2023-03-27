@@ -17,6 +17,9 @@ public class ZombieAI : MonoBehaviour
 
     protected CapsuleCollider zombieCollider;
 
+    //[SerializeField] private int MaxNumberOfZombies; // 22
+    private int currentDeadZombies = 0;
+
     protected virtual void Start()
     {
         //Debug.Log("Start from parent");
@@ -27,12 +30,6 @@ public class ZombieAI : MonoBehaviour
         health = maxHealth;
         img_hp.transform.localScale = new Vector3(health / maxHealth, 1, 1);
         isDead = false;
-    }
-
-
-    private void Update()
-    {
-
     }
 
     public void TakeDamage(float amount)
@@ -53,6 +50,8 @@ public class ZombieAI : MonoBehaviour
         canvas_hp.SetActive(false);
         isDead = true;
         anim.SetTrigger("isDead");
+
+        currentDeadZombies++;
     }
 
     protected virtual void PlayAttackSound() { }

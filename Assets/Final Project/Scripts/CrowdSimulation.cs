@@ -6,7 +6,7 @@ public class CrowdSimulation : MonoBehaviour
 {
     [SerializeField] float delayTime = 1f;
     [SerializeField] GameObject[] Waves;
-    int i = 0;
+    int i = 1;
     private void Start()
     {
         StartCoroutine(ActivateCrowdSimulation());
@@ -18,7 +18,9 @@ public class CrowdSimulation : MonoBehaviour
         {
             yield return new WaitForSeconds(delayTime);
             wave.SetActive(true);
-            delayTime += 30;
+            i++;
+            delayTime += 30 - (4 * i);
+            Debug.Log(delayTime);
         }
     }
 }
